@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    margin-top: 10px;
+}
+h1{
+    font-size: 80px;
+}
+label{
+    font-size: x-large;
+    margin-top: -1px;
+}
+#dob{
+    width: 350px;
+    height: 30px;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+#btn{
+    background-color: blue;
+    color: aliceblue;
+    margin-top: 10px;
+    height: 35px;
+    width: 150px;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+}
