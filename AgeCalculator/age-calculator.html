@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="./age.css">
+    <style>
+        body{
+            text-align: center;
+            margin-top: 10px;
+        }
+        h1{
+            font-size: 80px;
+        }
+        label{
+            font-size: x-large;
+            margin-top: -1px;
+        }
+        #dob{
+            width: 350px;
+            height: 30px;
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        #btn{
+            background-color: blue;
+            color: aliceblue;
+            margin-top: 10px;
+            height: 35px;
+            width: 150px;
+            font-size: large;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <label for="dob">Enter Your Date of Birth</label> <br>
+    <input type="date" name="dob" id="dob" placeholder="Date of Birth"> <br>
+    <button onclick="validdob()" id="btn">Calculate Age</button>
+    <p id="result"></p>
+</body>
+<script>
+    function validdob(){
+       const birthdate=document.getElementById('dob').value;
+       const birthdate_split=birthdate.split('-');
+
+       const birthdate_year=birthdate_split[0];
+       const birthdate_month=birthdate_split[1];
+       const birthdate_day=birthdate_split[2];
+
+       const currentdate=new Date();
+    //    const currentmonth=currentdate.getMonth();
+    //    const currentyear=currentdate.getFullYear();
+       const age_month=currentdate.getMonth() - birthdate.getMonth();
+       const age_year=currentdate.getFullYear() - birthdate.getFullYear();
+       if(birthdate.getFullYear()===currentdate.getFullYear() &&
+        birthdate.getMonth()<=currentdate.getMonth())
+      {
+        document.getElementById('result').innerHTML="your age is "+age_year+"years ,"+age_month+"motnths old"
+       }
+
+
+
+
+
+
+
+
+
+
+        // const today=new Date();
+        // const year=today.getFullYear();
+        // const month=today.getMonth();
+        // console.log(month);
+        // const dobinput=document.getElementById('dob').value;
+        // const dobsplit= dobinput.split('-')
+        //  console.log(dobsplit);
+        // const dobyear=dobsplit[0];
+        // const dobmonth=dobsplit[1];
+        // const dobday=dobsplit[2];
+        //  console.log(dobyear);
+        // console.log(dobmonth);
+        //  if(dobyear===year && dobmonth){
+            
+        //  }
+
+    }
+</script>
+</html>

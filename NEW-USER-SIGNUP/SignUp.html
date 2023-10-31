@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NEW USER SIGNUP</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+    <h1>New User Signup </h1>
+    <div>
+      <input type="text" name="fname" id="fname" placeholder="FirstName" onkeyup="validfname()"> <br>
+      <span id="Errfn"> FirstName should contain 5-15 characters</span><br>
+      <input type="text" name="uname" id="uname" placeholder="username" onkeyup="validuname()"> <br>
+      <span id="Errun"> UserName Must contain 5-12 characters</span><br>
+      <input type="email" name="email" id="email" placeholder="email" onkeyup="validemail()"> <br>
+      <span id="ErrE"> Email Must be valid Address e.g: me@mydomain.com</span> <br>
+      <input type="password" name="password" id="password" placeholder="password" onkeyup="validpassword()"> <br>
+      <span id="ErrP"> password must be AlphaNumeric(@,_and- are also allowed) and be 8-20 characters</span> <br>
+      <input type="text" name="telephone" id="telephone" placeholder="telephone" onkeyup="validtelph()"> <br>
+      <span id="ErrTno"> Telephone must be a valid indian telephone number(10 digits)</span> <br>
+      <input type="text" name="panCard" id="panCard" placeholder="panCard" onkeyup="validpanCard()"> <br>
+      <span id="ErrPC">must be a valid panCard Number</span> <br>
+    </div>
+    <script src="./signup.js"></script>
+</body>
+</html>
